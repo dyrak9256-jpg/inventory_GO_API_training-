@@ -18,7 +18,7 @@ func NewStore() *Store {
 	}
 }
 
-func (s *Store) Create(req CreateProductRequest) Product {
+func (s *Store) Create(req CreatedProductRequest) Product {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
@@ -68,7 +68,7 @@ func (s *Store) GetByID(id int) (Product, error) {
 	return p, nil
 }
 
-func (s *Store) Update(id int, req CreateProductRequest) (Product, error) {
+func (s *Store) Update(id int, req CreatedProductRequest) (Product, error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 

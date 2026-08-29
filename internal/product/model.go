@@ -21,7 +21,7 @@ type Product struct {
 	UpdatedAt time.Time `json:"updated_at"`
 }
 
-type CreateProductRequest struct {
+type CreatedProductRequest struct {
 	Name     string  `json:"name"`
 	Category string  `json:"category"`
 	Price    float64 `json:"price"`
